@@ -20,11 +20,9 @@ Examine file and folder permissions within Windows.
 
 ### Lab 03 — Password Policy Review
 Review password policy requirements and security controls.
-
-### Lab 04 — Account Lockout Controls
 Investigate lockout thresholds and authentication protections.
 
-### Lab 05 — Group Policy Basics
+### Lab 04 — Group Policy Basics
 Explore how Windows policies are used to enforce security settings.
 
 ## Disclaimer
