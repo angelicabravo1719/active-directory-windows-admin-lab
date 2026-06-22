@@ -1,32 +1,48 @@
-# 01 — Local Users and Groups
+# Lab 01 — Local Users and Groups Review
 
 ## Goal
 
-Understand how Windows manages local user accounts and group memberships.
+Understand how Windows manages local user accounts and security groups.
 
-User and group management is a foundational administrative task and plays an important role in authentication, authorization, and access control.
+User accounts provide authentication, while groups simplify permission management by assigning privileges to multiple users at once. Reviewing local users and groups helps build a foundational understanding of identity and access management within Windows environments.
 
 ---
 
 ## What I Did
 
-* Reviewed local user accounts.
-* Examined local group memberships.
-* Identified administrative and standard user accounts.
-* Documented account information.
-* Reviewed access control concepts.
+* Reviewed local user accounts using PowerShell.
+* Identified enabled and disabled accounts.
+* Reviewed local security groups.
+* Examined the purpose of several built-in groups.
+* Analyzed how Windows uses groups to manage permissions and access.
 
 ---
 
 ## Tools Used
 
-### Windows Computer Management
+### Windows PowerShell
 
-Used to review local users and groups.
+Used to review local users and local groups.
 
-### Local Users and Groups
+---
 
-Used to review user account and group information.
+## Commands Used
+
+### Review Local Users
+
+```powershell
+Get-LocalUser
+```
+
+Displays all local user accounts configured on the system.
+
+### Review Local Groups
+
+```powershell
+Get-LocalGroup
+```
+
+Displays all local security groups configured on the system.
 
 ---
 
@@ -72,7 +88,7 @@ WDAGUtilityAccount
 WsiAccount
 ```
 
-Observations:
+#### Observations
 
 * The primary active account was `angel`.
 * The built-in `Administrator` account was disabled.
@@ -100,7 +116,7 @@ User Mode Hardware Operators
 Users
 ```
 
-Observations:
+#### Observations
 
 * The `Administrators` group provides unrestricted access to the system.
 * The `Event Log Readers` group allows members to review Windows event logs.
@@ -118,3 +134,35 @@ The workstation appeared to follow standard Windows security practices, includin
 ### Conclusion
 
 Local users and groups provide the foundation for identity and access management within Windows environments. Reviewing user accounts and security groups demonstrated how Windows organizes permissions and controls access to system resources.
+
+---
+
+## Security Relevance
+
+Identity and access management is a core component of cybersecurity.
+
+Security analysts frequently review user accounts and group memberships when investigating:
+
+* Unauthorized access
+* Privilege escalation
+* Insider threats
+* Account misuse
+* Access control violations
+
+Understanding local users and groups provides a foundation for working with Active Directory and enterprise identity management systems.
+
+---
+
+## Key Takeaways
+
+* Windows uses local user accounts for authentication.
+* Security groups simplify permission management.
+* Built-in accounts such as Administrator and Guest can be disabled to reduce risk.
+* Group membership determines what actions users can perform.
+* Identity and access management is a fundamental cybersecurity concept.
+
+---
+
+## Note
+
+This lab was performed in a personal lab environment for educational and portfolio development purposes.
